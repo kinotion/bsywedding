@@ -48,7 +48,52 @@
     <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=vmto3g50l8"></script>
     <script id="code">
         var mapDiv = document.getElementById('map');
-        var map = new naver.maps.Map(mapDiv);
+        var map = new naver.maps.Map('map', {
+            center: new naver.maps.LatLng(37.511702, 127.100109), //지도의 초기 중심 좌표
+            zoom: 17, //지도의 초기 줌 레벨
+            minZoom: 8, //지도의 최소 줌 레벨
+            zoomControl: true, //줌 컨트롤의 표시 여부
+            zoomControlOptions: { //줌 컨트롤의 옵션
+                position: naver.maps.Position.TOP_RIGHT
+        }});
+        var marker = new naver.maps.Marker({
+            position: new naver.maps.LatLng(37.511702, 127.100109),
+            map: map
+        });
+
+        var contentString = [
+        '<div class="iw_inner" style="padding:5px; margin: 5px 0px 5px 0px; width: 150px; height: 45px; text-align: center; ">',
+        '   <p style="foint-size: 2rem; margin: 0;">롯데호텔잠실</p>',
+        '   <p style="font-size: 0.8rem; margin: 0;">서울 송파구 올림픽로 240 </p>',
+        '</div>'
+        ].join('');
+
+        var infowindow = new naver.maps.InfoWindow({
+            content: contentString,
+            maxWidth: 200,
+            height: 50,
+            backgroundColor: "white",
+            borderColor: "black",
+            borderWidth: 2,
+            disableAnchor: true,
+            textAlign: "center",
+            margin: "auto",
+
+            pixelOffset: new naver.maps.Point(0, -5)
+        });
+
+        naver.maps.Event.addListener(marker, "click", function(e) {
+            if (infowindow.getMap()) {
+                infowindow.close();
+            } else {
+                infowindow.open(map, marker);
+            }
+        });
+
+        infowindow.open(map, marker);
     </script>
+    <div>
+        <p>&nbsp;</p>
+    </div>
 </body>
 </html>
