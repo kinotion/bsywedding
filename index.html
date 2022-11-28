@@ -8,13 +8,6 @@
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
     <script src='main.js'></script>
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-    <!-- 각자 발급받은 Client ID 값 넣기 -->
-    <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=[vmto3g50l8]"></script>
-    <script id="code">
-        var mapDiv = document.getElementById('map');
-        var map = new naver.maps.Map(mapDiv);
-    </script>
-    
     <style>
     </style>
 </head>
@@ -51,5 +44,11 @@
             <code id="snippet" class="snippet"></code>
         </section>
       </div>
+          <!-- 각자 발급받은 Client ID 값 넣기 -->
+    <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=[vmto3g50l8]"></script>
+    <script id="code">
+        var mapDiv = document.getElementById('map');
+        var map = new naver.maps.Map(mapDiv);
+    </script>
 </body>
 </html>
