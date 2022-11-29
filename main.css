@@ -4,3 +4,14 @@ body {
         font-family: 'Dongle', sans-serif;
         font-size: xx-large;
 }
+
+.grid-container {
+        display: grid;
+        grid-template-columns: auto auto auto;
+    }
+    
+    .grid-item {
+        padding: 4px;
+        text-align:center;
+        width: 100%;
+    }

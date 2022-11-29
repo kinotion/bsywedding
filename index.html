@@ -14,7 +14,7 @@
 <body style="text-align: center;">
     <div>
         <lottie-player src="https://assets3.lottiefiles.com/packages/lf20_skMCZaRDnL.json"  background="transparent" 
-        speed="0.7"  style="width: 100%; height: auto;"  autoplay></lottie-player>
+        speed="0.7"  style="width: 100%; height: auto;" loop autoplay></lottie-player>
     </div>
     <div  style ="line-height: 1px; margin-left: 20px; margin-right: 20px;"> 
         <p>2022</p>
@@ -30,11 +30,11 @@
     </div>
 
     <div>
-        <p>&nbsp;</p>
+        <br>
         <p> 3월의 어느 멋진날</p>
     </div>
     <div>
-        <p>&nbsp;</p>
+        <br>
         <p> 예식장 안내</p>
     </div>
     <div class="container">
@@ -61,12 +61,12 @@
             map: map
         });
 
-        var contentString = [
-        '<div class="iw_inner" style="padding:5px; width: 100px; height: 30px; text-align: center; ">',
-        '   <p style="foint-size: 1.5rem; margin: 0;">롯데호텔잠실</p>',
-        '   <p style="font-size: 0.8rem; margin: 0;">서울 송파구 올림픽로 240 </p>',
-        '</div>'
-        ].join('');
+        // var contentString = [
+        // '<div class="iw_inner" style="padding:5px; width: 100px; height: 30px; text-align: center; ">',
+        // '   <p style="foint-size: 1.5rem; margin: 0;">롯데호텔잠실</p>',
+        // '   <p style="font-size: 0.8rem; margin: 0;">서울 송파구 올림픽로 240 </p>',
+        // '</div>'
+        // ].join('');
 
         var infowindow = new naver.maps.InfoWindow({
             content: contentString,
@@ -93,7 +93,21 @@
         infowindow.open(map, marker);
     </script>
     <div>
-        <p>&nbsp;</p>
+        <p style="font-size: x-large; color: slategrey;">주차</p>
+        <p style="font-size: x-large; color: slategrey;">롯데 호텔 주차장 6시간 이용가능</p>
+    </div>
+
+    <!-- 포토부스 -->
+    <div>
+        <br>
+        <div class="grid-container">
+            <img class="grid-item" src="img/img1.jpeg">
+            <img class="grid-item" src="img/img2.jpeg">
+            <img class="grid-item" src="img/img3.jpeg">
+            <img class="grid-item" src="img/img4.jpeg">
+            <img class="grid-item" src="img/img5.jpeg">
+            <img class="grid-item" src="img/img6.jpeg">
+        </div>
     </div>
 </body>
 </html>
