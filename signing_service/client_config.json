@@ -1,0 +1,8 @@
+{
+  "server_url": "http://localhost:8080",
+  "watch_dir": "C:\\to_sign",
+  "output_dir": "C:\\signed",
+  "poll_interval_sec": 1.0,
+  "retry_count": 3,
+  "retry_backoff_sec": 2.0
+}
